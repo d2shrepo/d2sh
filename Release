@@ -1,0 +1,9 @@
+Origin: D2shRepo
+Label: D2shResho
+Suite: stable
+Version: 1.0
+Codename: A M2RV
+Architectures: iphoneos-arm
+Components: main
+Description: D2sh JB Repository
+Icon: https://b.top4top.io/p_29770sq4x0.png
