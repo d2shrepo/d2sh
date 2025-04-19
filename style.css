@@ -1,0 +1,115 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(135deg, #101010, #F2C078);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.card {
+  background: rgba(34, 34, 34, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.logo {
+  text-align: center;
+  margin: 15px 0;
+  z-index: 1;
+  position: relative;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* القاعدة */
+.particle {
+  position: absolute;
+  top: -10px;
+  z-index: 0;
+  animation: fall 10s linear infinite;
+  opacity: 0.5;
+}
+
+/* الثلج (دوائر) */
+.snowflake {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+/* المثلثات */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid rgba(255, 255, 255, 0.3);
+  animation: fall 10s linear infinite, rotateAnim 3s linear infinite;
+}
+
+/* الخطوط النارية */
+.fire-line {
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, #ffcc00, #ff3300);
+  animation: fall 10s linear infinite, flickerAnim 1s ease-in-out infinite;
+}
+
+/* حركة النزول */
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-20px);
+    opacity: 0;
+  }
+}
+
+/* دوران خفيف للمثلث */
+@keyframes rotateAnim {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* تذبذب ناري بسيط */
+@keyframes flickerAnim {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.5); }
+}
