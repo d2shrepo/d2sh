@@ -10,52 +10,25 @@
 
   <!-- شعار الموقع -->
   <div class="logo">
-    <img src="Al_FAHAD.png" alt="شعار الموقع">
+    <img src="Al_FAHAD.png" alt="alfahad ">
   </div>
 
+  <!-- روابط التواصل الاجتماعي -->
+  <div class="social-links">
+    <a href="https://t.me/AF3_projects" target="_blank">
+      <img src="Telegram_Logo.png" alt="تيليجرام">
+    </a>
+
+  </div> 
+
   <!-- عنوان الصفحة -->
-  <h1>اختر فئة القنوات</h1>
+  <h1>AL FAHAD SPORTS</h1>
 
   <!-- القوائم -->
   <div id="categories" class="grid"></div>
 
-  <!-- تأثير الشظايا -->
- <script>
-  const effects = ['snow', 'triangle', 'fire'];
-  let currentEffect = 0;
 
-  function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
 
-    switch (effects[currentEffect]) {
-      case 'snow':
-        particle.classList.add('snowflake');
-        break;
-      case 'triangle':
-        particle.classList.add('triangle');
-        break;
-      case 'fire':
-        particle.classList.add('fire-line');
-        break;
-    }
-
-    particle.style.left = Math.random() * window.innerWidth + 'px';
-    particle.style.animationDuration = (Math.random() * 5 + 5) + 's';
-    particle.style.opacity = Math.random();
-    document.body.appendChild(particle);
-
-    setTimeout(() => {
-      particle.remove();
-    }, 10000);
-  }
-
-  setInterval(createParticle, 200);
-
-  setInterval(() => {
-    currentEffect = (currentEffect + 1) % effects.length;
-  }, 10000);
-</script>
 
   <!-- ملفات الجافاسكربت -->
   <script src="data.js"></script>
